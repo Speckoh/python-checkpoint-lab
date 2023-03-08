@@ -54,9 +54,13 @@ def has_ruby_exp():
             'pasta': False
         }
     }
+    #print(experience['jimmy']['ruby'])
     for instructor in experience:
-        print(instructor.ruby)
-has_ruby_exp()
+        if(experience[instructor]['ruby'] == True):
+        #print(experience[instructor]['ruby'])
+            ruby_experience.append(instructor)
+    return ruby_experience
+print(has_ruby_exp())
 
 # #3: Create a method called toggle_str_num that takes an argument. If the
 # argument is a string, convert it to an integer and return the integer; If the
